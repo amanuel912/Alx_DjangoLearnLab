@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from relationship_app.models import Book,Author,Library,Librarian   
 from django.views.generic.detail import DetailView
-from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
+from django.contrib.auth.forms import UserCreationForm
+
 from django.contrib.auth.decorators import login_required
 from .models import Library
 # Create your views here.
