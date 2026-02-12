@@ -5,6 +5,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.http import HttpResponse
 
 from django.contrib.auth.decorators import login_required
 from .models import Library
@@ -41,7 +42,7 @@ def register(request):
     return render(request, 'relationship_app/register.html', {'form': form})
 
 def is_admin(user):
-    return user.userprofile.role == 'Admin'
+    return user.is_authenticated and user.userprofile.role == 'Admin'
 
 def is_librarian(user):
     return user.userprofile.role == 'Librarian'
@@ -52,7 +53,7 @@ def is_member(user):
 @login_required
 @user_passes_test(is_admin)
 def admin_view(request):
-    return render(request, 'relationship_app/admin_view.html')
+    return HttpResponse("Admin Content")
 
 @login_required
 @user_passes_test(is_librarian)
