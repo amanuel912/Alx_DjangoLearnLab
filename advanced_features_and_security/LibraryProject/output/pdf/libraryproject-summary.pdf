@@ -1,0 +1,82 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1820 >>
+stream
+BT
+/F1 18 Tf
+72 760 Td
+(LibraryProject \(Django\) - one-page summary) Tj
+/F1 12 Tf
+0 -22 Td
+(What it is: Django 6 sample of library relationships with role-aware views.) Tj
+0 -16 Td
+(Who it's for: Django learners or instructors needing clear model examples.) Tj
+0 -16 Td
+(What it does:) Tj
+0 -16 Td
+( - Core models: Author, Book, Library, Librarian, UserProfile \(role choices\).) Tj
+0 -16 Td
+( - Relationships: Book FK Author; Library ManyToMany Book; Librarian OneToOne Library.) Tj
+0 -16 Td
+( - Lists all books with author names at /relationship_app/books/.) Tj
+0 -16 Td
+( - Library detail page served via class-based DetailView.) Tj
+0 -16 Td
+( - Registration/login/logout use Django auth forms \(AuthenticationForm, UserCreationForm\).) Tj
+0 -16 Td
+( - Role dashboards for Admin/Librarian/Member guarded by decorators.) Tj
+0 -16 Td
+( - post_save signal auto-creates a UserProfile when a User is added.) Tj
+0 -16 Td
+( - bookshelf app holds a separate Book model plus CRUD how-to snippets.) Tj
+0 -16 Td
+(How it works \(architecture\):) Tj
+0 -16 Td
+( - Project: LibraryProject settings/urls include apps relationship_app and bookshelf.) Tj
+0 -16 Td
+( - Persistence: SQLite \(db.sqlite3\) configured in settings.py.) Tj
+0 -16 Td
+( - Routing: project URLs include relationship_app.urls; templates live under relationship_app/templates.) Tj
+0 -16 Td
+( - Data flow: requests -> views -> ORM queries -> templates; auth uses built-in forms.) Tj
+0 -16 Td
+( - Login/logout template files referenced but not found in repo.) Tj
+0 -16 Td
+(How to run:) Tj
+0 -16 Td
+( 1\) python3 -m venv venv && source venv/bin/activate) Tj
+0 -16 Td
+( 2\) pip install django==6.0.1) Tj
+0 -16 Td
+( 3\) python manage.py migrate) Tj
+0 -16 Td
+( 4\) python manage.py runserver) Tj
+0 -16 Td
+( 5\) Open http://127.0.0.1:8000/relationship_app/books/) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000002113 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+2183
+%%EOF
